@@ -49,11 +49,11 @@ public class UserDaoJdbcImpl implements UserDao {
 
     }
 
-    public void removeUserById(long id) {
+    public void removeUserById(long idUser) {
         try {
             String sql = " delete from users where id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setLong(1,id);
+            preparedStatement.setLong(1, idUser);
             System.out.println(preparedStatement.executeUpdate());
             preparedStatement.close();
         } catch (SQLException e) {

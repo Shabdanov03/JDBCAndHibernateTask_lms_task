@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
 
-        Util.getConnection();
+        Util.createSessionFactory();
         UserService userService = new UserServiceImpl();
         while (true) {
             System.out.println("" +
